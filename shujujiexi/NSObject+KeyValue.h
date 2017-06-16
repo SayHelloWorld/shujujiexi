@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Ustb)
+@interface NSObject (KeyValue)
 
 + (id)objectWithDictionary:(NSDictionary *)dict;
 + (NSArray *)modelArrayWithDictionaryArray:(NSArray *)dictArray;

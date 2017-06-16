@@ -6,9 +6,9 @@
 //  Copyright © 2017年 ustb. All rights reserved.
 //
 
-#import "NSObject+Ustb.h"
+#import "NSObject+KeyValue.h"
 #import "objc/runtime.h"
-@implementation NSObject (Ustb)
+@implementation NSObject (KeyValue)
 
 + (id)objectWithDictionary:(NSDictionary *)dict
 {
@@ -52,7 +52,6 @@
     }
     unsigned int outCount;
     objc_property_t  *propertys= class_copyPropertyList([self class], &outCount);
-    
     for (int i = 0; i < outCount; i++) {
         id value = nil;
         value = [dict valueForKey:[NSString stringWithUTF8String:property_getName(propertys[i])]];
